@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>My Puzzle</title>
+        <link rel='stylesheet' href='style.css'>
+        <link rel="shortcut icon" type="image/x-icon" href="./pic/icon.jpg">
+    </head>
+    <body>
+        
+        <div id="status">
+            <b id='bstatus'>YOU WIN</b>
+        </div>
+        <div id="contain">
+            <table id='gameboard'>
+                
+            </table>
+        </div>
+        <div id="option">
+            <div id="input">
+                <table id='tblinput'>
+                    <tr>
+                        <td><label class='title'>ROW</label></td>
+                        <td><input type="text" id="row" value='3' class='box' onClick="this.setSelectionRange(0,this.value.length)" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"></td>
+                    </tr>
+                    <tr class='space'></tr>
+                    <tr>
+                        <td><label class='title'>COL</label></td>
+                        <td><input type="text" id='col' value='3' class='box' onClick="this.setSelectionRange(0,this.value.length)" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="info">
+                <table id='tblinfo'>
+                    <tr>
+                        <td><label class='title'>MOVES: </label></td>
+                        <td class='tdinput'><input type="text" id='txtmoves' class='txtinput' value='0' readonly ></td>
+                    </tr>
+                    <tr class='space'></tr>
+                    <tr>
+                        <td><label class='title'>TIME: </label></td>
+                        <td class='tdinput'><input type="text" id='txttime' class='txtinput' value='00:00:00' readonly></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="button">
+                <table id="tblbutton">
+                    <tr>
+                        <td><button id='btnewgame' class='bt' onclick='start();'>NEW</button></td>
+                    </tr>
+                    
+                    
+                </table>
+            </div>
+        </div>
+
+        
+        
+    </body>
+    <script src='game.js'></script>
+</html>
